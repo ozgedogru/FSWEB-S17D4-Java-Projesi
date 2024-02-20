@@ -1,0 +1,57 @@
+2-) SELECT ograd, ogrsoyad, sinif FROM ogrenci;
+
+3-) SELECT * FROM ogrenci WHERE cinsiyet ='K';
+
+4-) SELECT DISTINCT sinif FROM ogrenci;
+
+5-) SELECT * FROM ogrenci WHERE sinif = '10A' AND cinsiyet='K';
+
+6-) SELECT ograd, ogrsoyad, sinif FROM ogrenci WHERE sinif = '10A' OR sinif = '10B';
+
+7-) SELECT ograd, ogrsoyad, ogrno AS 'okul numarası' FROM ogrenci;
+
+8-) SELECT CONCAT(ograd, ogrsoyad) FROM ogrenci AS adsoyad;
+
+9-) SELECT ograd from ogrenci WHERE ograd LIKE 'A%';
+
+10-) SELECT kitapadi, sayfasayisi from kitap WHERE sayfasayisi BETWEEN 50 AND 200;
+
+11-) SELECT * FROM ogrenci WHERE ograd IN ('Fidan', 'Ismal', 'Leyla');
+
+12-)  SELECT ograd FROM ogrenci WHERE ograd LIKE 'A%' OR ograd LIKE 'D%' OR ograd LIKE 'K%';
+
+13-) SELECT ograd, ogrsoyad, sinif, cinsiyet FROM ogrenci WHERE (sinif = '9A' AND cinsiyet = 'E') OR (sinif = '9B' AND cinsiyet = 'K');
+
+14-) SELECT * FROM ogrenci WHERE (sinif = '10A' OR '10B' AND cinsiyet = 'E');
+
+15-) SELECT * FROM ogrenci WHERE dtarih LIKE '1989%';
+
+16-) SELECT * FROM ogrenci WHERE ogrno BETWEEN 30 AND 50 AND cinsiyet='K';
+
+17-) SELECT * FROM ogrenci ORDER BY ograd;
+
+18-) SELECT * FROM ogrenci ORDER BY ograd, ogrsoyad;
+
+19-) SELECT * FROM ogrenci WHERE sinif = '10A' ORDER BY numara DESC;
+
+20-) SELECT * FROM ogrenci LIMIT 10;
+
+21-) SELECT ograd, ogrsoyad, dtarih FROM ogrenci LIMIT 10;
+
+22-) SELECT * FROM kitap ORDER BY sayfasayisi DESC LIMIT 1;
+
+23-) SELECT * FROM ogrenci ORDER BY dtarih DESC LIMIT 1;
+
+24-) SELECT * FROM ogrenci WHERE sinif ='10A' ORDER BY dtarih ASC LIMIT 1;
+
+25-) SELECT * FROM kitap WHERE kitapadi LIKE '_N%';
+
+26-) SELECT sinif, COUNT(*) AS ogrencisayisi FROM ogrenci GROUP BY sinif;
+
+27-) SELECT * FROM ogrenci ORDER BY RAND();
+
+28-) SELECT * FROM ogrenci ORDER BY RAND() LIMIT 1;
+
+29-) SELECT * FROM ogrenci WHERE sinif = '10A' ORDER BY RAND() LIMIT 1;
+
+30-) SELECT ograd, COUNT(*) AS adet FROM ogrenci GROUP BY ograd;
